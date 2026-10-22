@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fixture Image</title>
+<style>
+  body { font-family: -apple-system, sans-serif; margin: 0; max-width: 60rem; padding: 2rem; }
+  img { width: 200px; height: 100px; }
+</style>
+</head>
+<body>
+<h1>Broken Image Fixture</h1>
+<img src="missing.png" alt="intentionally missing">
+<p>The image above points at a file that does not exist, so the load check must report a failure
+through the naturalWidth probe, while the rest of the page stays well-formed enough to pass the
+other six checks in the delivery gate, isolating the failing condition to the image rule.</p>
+<ul>
+<li>Pen injectors for pharmaceutical partners worldwide and compounding pharmacies.</li>
+<li>Auto-injectors developed and manufactured under a certified quality system.</li>
+<li>Reusable platforms for chronic therapy areas and specialty molecules.</li>
+<li>Dual-chamber development program for two-molecule therapies.</li>
+<li>Device development from concept through verification and validation.</li>
+<li>Manufacturing with in-process controls and traceability records.</li>
+<li>Quality and regulatory support across multiple jurisdictions and markets.</li>
+<li>Partnership models tailored to each sponsor and each program scope.</li>
+</ul>
+<p>Additional closing paragraph so the emptiness thresholds are cleared and the only failing
+check on this fixture is the broken image load reported by the delivery gate tool.</p>
+</body>
+</html>

@@ -7,7 +7,7 @@ Redesign of www.summed-medtech.com. Static HTML/CSS/vanilla JS, no build step.
 ## Structure
 
 - `index.html` — home
-- `products/` — platform overview + 6 platform pages (Simject, eSimject, Multtipen, Syrpen, eSyrpen, Dual Chamber)
+- `products/` — platform overview + 5 platform pages (Simject, eSimject, Multtipen, eSyrpen, Dual Chamber)
 - `capabilities/` `about/` `news/` `contact/` — company pages
 - `404.html`
 - `assets/` — css/js/img

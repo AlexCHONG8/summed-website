@@ -11,14 +11,14 @@ check-site.py — Summed website 交付门 (scrolling-page fork of check-html.py
   3. CLIPPED         — 固定高度容器内文本被截断
   4. IMG             — 图片加载失败 / 渲染比例扭曲 (>15%)
   5. EMPTY           — 正文可见文本 <200 字符 或元素 <30
-  6. VIEWPORTS       — 1440/1280/1024/768 宽度下无水平溢出
+  6. VIEWPORTS       — 1440/1280/1024/768/390 宽度下无水平溢出
   7. CONTENT-POLICY  — 禁用词 (Multtiject / multi-dose / cartridge / 已上市类表述)
 """
 import asyncio, sys, pathlib, glob, os
 
 FORBIDDEN = ['multtiject', 'multi-dose', '多剂量', 'cartridge', '卡式瓶', '已注册', '已批准', '已上市']
 
-VIEWPORTS = [(1440, 900), (1280, 800), (1024, 768), (768, 1024)]
+VIEWPORTS = [(1440, 900), (1280, 800), (1024, 768), (768, 1024), (390, 844)]
 
 
 def find_chromium():

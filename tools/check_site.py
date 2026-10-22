@@ -118,6 +118,8 @@ RATIO_JS = """(src) => {
   const b = img.getBoundingClientRect();
   if (b.width < 2) return null;
   const hasRot = /rotate\\(/.test(img.style.transform) || /rotate\\(/.test(getComputedStyle(img).transform);
+  const ofit = getComputedStyle(img).objectFit;
+  if (ofit === 'contain' || ofit === 'cover' || ofit === 'scale-down' || ofit === 'none') return null;
   let nw = img.naturalWidth, nh = img.naturalHeight;
   if (hasRot) [nw, nh] = [nh, nw];
   const natRatio = nw / nh, renRatio = b.width / b.height;

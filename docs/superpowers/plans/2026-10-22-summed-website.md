@@ -17,7 +17,7 @@
 - **All internal hrefs/src RELATIVE** (e.g. `../../assets/css/site.css`, `../index.html`). Never leading `/` — Pages serves under `alexchong8.github.io/<repo>/`.
 - English only. No language toggle.
 - Content policy (checker-enforced, forbidden in rendered text): `multtiject`, `multi-dose`, `多剂量`, `cartridge`, `卡式瓶`, `已注册`, `已批准`, `已上市`. Multtiject must not appear anywhere in the repo's HTML.
-- Spec whitelist — the ONLY device numbers allowed: Multtipen `~8 N` injection force, `<10 s` full dose `@ 0.75 mL`; Simject `<0.5 s` injection. All other spec content = "Tailored to your URS" + request-specs CTA. Never source numbers from DHFs.
+- Spec whitelist — the ONLY device numbers allowed: Multtipen `~8 N` injection force, `<10 s` full dose `@ 0.75 mL`; SimjectEpi (EAI epinephrine application) `<0.5 s` injection. All other spec content = "Tailored to your URS" + request-specs CTA. Never source numbers from DHFs.
 - Dual Chamber story = 3 steps (Mix, Purge, Inject) vs traditional two-vial ~10 steps (mix-error, wrong-patient risk). No chamber internals, no timing, no mechanism detail.
 - Multtipen USP wording: "the first pen injector of its class developed in Asia, engineered to a FlexTouch-class injection experience — press to inject, release to stop."
 - Terminology: single-patient-use (Simject, Multtipen, Syrpen); reusable (eSyrpen, eSimject).
@@ -125,7 +125,7 @@ class TestChecker(unittest.TestCase):
 **Files:**
 - Create: `products/simject/index.html`
 
-- [ ] **Step 1: Write page** — same pattern as Task 4. Hero: Simject · Single-patient-use auto-injector. Headline spec: `<0.5 s` injection, presented as "sub-half-second injection, engineered to customer URS". Feature cards include Epi variant mention ("epinephrine-ready variant — SimjectEpi" as program note, no specs). Typographic hero (no cleared render).
+- [ ] **Step 1: Write page** — same pattern as Task 4. Hero: Simject · Single-patient-use auto-injector. Headline spec belongs to the **EAI application**: SimjectEpi `<0.5 s` injection for epinephrine auto-injector use, framed "sub-half-second injection for epinephrine (EAI) applications, engineered to customer URS". Base Simject platform = no numbers, tailored-to-URS band. Typographic hero (no cleared render).
 - [ ] **Step 2: Browser-verify + gate** — same checks.
 - [ ] **Step 3: Commit** — `git commit -am "feat: Simject platform page"`
 

@@ -131,7 +131,7 @@ Footer: address (上海市长宁区思创大厦), BD email, product links, NDA-s
 
 Cleared headline specs per platform (Alex, 2026-10-22):
 - **Multtipen**: USP = first-in-Asia pen matching the Novo Nordisk FlexTouch injection experience (press = inject, release = stop semantics). Disclosed: injection force ~8 N; full dose <10 s @ 0.75 mL. Hero asset = White-Render.png.
-- **Simject**: EAI platform; disclosed: injection speed <0.5 s (customer-URS-derived figure — present as "sub-half-second injection, engineered to customer URS").
+- **Simject**: base platform = no disclosed numbers. The `<0.5 s` injection speed belongs to the **EAI (epinephrine auto-injector) application** — SimjectEpi variant; present as "sub-half-second injection for epinephrine (EAI) applications, engineered to customer URS".
 - Other platforms: no cleared numbers yet — typographic feature treatment, no fabricated specs.
 
 **Dual Chamber flagship page**: SHL-Elexy-style storytelling. The public-safe story is **workflow, not internals**: traditional two-vial preparation = ~10 steps, with mix-error and wrong-patient failure modes; Dual Chamber = **3 steps — mix, purge, inject**. Mechanism section = this side-by-side step comparison; no chamber internals, no timing, no mixing specifics. Arc: problem (stability + preparation error risk of dual-molecule therapies) → 3-step vs 10-step comparison → status (in development) → partner CTA. This is the one page allowed to be cinematic (full-bleed sections, scroll narrative), because it sells the future.
@@ -175,7 +175,7 @@ Cleared headline specs per platform (Alex, 2026-10-22):
 
 ## 10a. Resolved (Alex, 2026-10-22)
 
-- **Spec policy**: no full spec tables. Headline cleared numbers only: Multtipen ~8 N force / <10 s @ 0.75 mL / first-in-Asia FlexTouch-class USP; Simject <0.5 s injection. Everything else = "tailored to your URS" + request-specs CTA.
+- **Spec policy**: no full spec tables. Headline cleared numbers only: Multtipen ~8 N force / <10 s @ 0.75 mL / first-in-Asia FlexTouch-class USP; SimjectEpi (EAI epinephrine application) <0.5 s injection. Everything else = "tailored to your URS" + request-specs CTA.
 - **Dual Chamber story**: public-safe angle = 3-step (mix, purge, inject) vs traditional 2-vial ~10-step workflow, targeting mix-error and wrong-patient failure modes. No chamber internals.
 - **GitHub**: own account `alexchong8`, public repo, Pages staging.
 

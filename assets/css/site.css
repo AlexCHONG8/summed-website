@@ -211,6 +211,26 @@ h3 { font-size: 22px; line-height: 1.3; }
 }
 .lang-toggle:hover { color: var(--brand-dark); border-color: var(--brand-light); }
 
+.lang-switch {
+  flex-shrink: 0;
+  display: flex;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.lang-switch a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--charcoal);
+  padding: 7px 10px;
+  border-left: 1px solid var(--rule);
+}
+.lang-switch a:first-child { border-left: none; }
+.lang-switch a:hover { color: var(--brand-dark); background: var(--brand-pale); }
+.lang-switch a[aria-current] { background: var(--brand-dark); color: #FFFFFF; }
+.lang-switch a[aria-current]:hover { color: #FFFFFF; background: var(--brand-dark); }
+
 /* ---------- hero ---------- */
 
 .hero { background: var(--brand-dark); color: var(--cream); }

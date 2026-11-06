@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/">
 <link rel="stylesheet" href="assets/css/site.css">
+<link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="index.html"><img src="assets/img/summed-logo.png" alt="Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="Main">
+    <nav class="main-nav" id="site-nav" aria-label="Main">
       <ul>
         <li class="nav-item">
-          <a href="products/index.html">Products</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" href="products/index.html">Products</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="products/index.html">All platforms</a>
             <div class="drop-group">
               <div class="drop-label">Auto-injectors</div>
               <a href="products/simject/index.html">Simject</a>
@@ -52,26 +57,40 @@
         <li><a href="news/index.html">News</a></li>
         <li><a href="about/index.html">About</a></li>
         <li><a href="contact/index.html">Contact</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="contact/index.html">Start a conversation</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="cn/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="ru/index.html" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="cn/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="ru/index.html" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="contact/index.html">Start a conversation</a>
     </div>
-    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
-<section class="hero">
+<section class="hero hero--home">
   <div class="container">
-    <h1>Injection devices, engineered for your molecule.</h1>
-    <p class="hero-sub">Summed Medtech develops and manufactures pen injectors and auto-injectors for pharmaceutical and compounding-pharmacy partners — from concept to regulated production.</p>
-    <div class="hero-cta">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">OEM injection devices · Shanghai</div>
+      <h1>Injection devices, engineered for your molecule.</h1>
+      <p class="hero-sub">Summed Medtech develops and manufactures pen injectors and auto-injectors for pharmaceutical and compounding-pharmacy partners — from concept to regulated production.</p>
+      <div class="hero-cta">
       <a class="btn btn--primary" href="products/index.html">Explore platforms</a>
       <a class="btn btn--ghost" href="contact/index.html">Talk to BD</a>
     </div>
+      <div class="hero-facts">
+        <div class="fact"><span class="fact-k">No. 044730</span><span class="fact-v">US Drug Master File</span></div>
+        <div class="fact"><span class="fact-k">ISO 13485</span><span class="fact-v">Aligned quality system</span></div>
+        <div class="fact"><span class="fact-k">Shanghai</span><span class="fact-v">Development &amp; production</span></div>
+      </div>
+    </div>
+    <figure class="hero-art">
+      <img src="assets/img/esimject.jpg" alt="eSimject reusable smart auto-injector" width="1400" height="919">
+      <figcaption><span>eSimject</span><span>Reusable · Smart</span></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -107,7 +126,7 @@
       </div>
       <div class="card card--product">
         <div class="card-media">
-          <img src="assets/img/esimject.jpg" alt="eSimject reusable smart auto injector with cartridges" width="1400" height="919" loading="lazy">
+          <img src="assets/img/esimject.jpg" alt="eSimject reusable smart auto-injector" width="1400" height="919" loading="lazy">
         </div>
         <div class="card-body">
           <span class="badge">Reusable · Smart</span>
@@ -129,7 +148,7 @@
       </div>
       <div class="card card--product card--highlight">
         <div class="card-media">
-          <img src="assets/img/dual-chamber.jpg" alt="eSyrpen Dual Chamber pen with dual-chamber cartridge" width="1024" height="1400" loading="lazy">
+          <img src="assets/img/dual-chamber.jpg" alt="eSyrpen Dual Chamber pen injector" width="1024" height="1400" loading="lazy">
         </div>
         <div class="card-body">
           <span class="badge badge--dev">In development</span>
@@ -154,17 +173,17 @@
       <h2>Built as a development partner, not a catalog</h2>
     </div>
     <div class="grid grid--3">
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>Device development</h3>
-        <p style="color:var(--brand-pale)">Feasibility, detailed design, prototyping, and verification — carried by one engineering team from your first requirement draft to design freeze.</p>
+        <p>Feasibility, detailed design, prototyping, and verification — carried by one engineering team from your first requirement draft to design freeze.</p>
       </div>
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>Manufacturing</h3>
-        <p style="color:var(--brand-pale)">Regulated assembly operations with in-process controls, traceability, and capacity that scales with your launch plan.</p>
+        <p>Regulated assembly operations with in-process controls, traceability, and capacity that scales with your launch plan.</p>
       </div>
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>Quality &amp; regulatory</h3>
-        <p style="color:var(--brand-pale)">Quality systems aligned to device standards, with regulatory documentation packages that move with your submissions.</p>
+        <p>Quality systems aligned to device standards, with regulatory documentation packages that move with your submissions.</p>
       </div>
     </div>
   </div>
@@ -178,10 +197,10 @@
       <p>Every program starts from your user requirement specification and ends with a device your patients can use without thinking about it.</p>
     </div>
     <div class="grid grid--4">
-      <div class="card"><h3>Device development</h3><p>Concept to design freeze under design controls.</p></div>
-      <div class="card"><h3>Device support</h3><p>Human factors, testing, and lifecycle engineering.</p></div>
-      <div class="card"><h3>Manufacturing</h3><p>Molding, assembly, and packaging at regulated scale.</p></div>
-      <div class="card"><h3>Track record</h3><p>Programs across NMPA and export markets.</p></div>
+      <div class="card card--index"><span class="card-index-n">01</span><h3>Device development</h3><p>Concept to design freeze under design controls.</p></div>
+      <div class="card card--index"><span class="card-index-n">02</span><h3>Device support</h3><p>Human factors, testing, and lifecycle engineering.</p></div>
+      <div class="card card--index"><span class="card-index-n">03</span><h3>Manufacturing</h3><p>Molding, assembly, and packaging at regulated scale.</p></div>
+      <div class="card card--index"><span class="card-index-n">04</span><h3>Track record</h3><p>Programs across NMPA and export markets.</p></div>
     </div>
     <p class="mt-24"><a class="card-link" href="capabilities/index.html">All capabilities →</a></p>
   </div>
@@ -204,11 +223,15 @@
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <div class="section-kicker">Next step</div>
-    <h2>Tell us about your molecule.</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">Dose format, target patient profile, market plan — we will map them to a platform and a development path.</p>
-    <a class="btn btn--primary" href="contact/index.html">Start a conversation</a>
-    <a class="btn btn--ghost" href="products/index.html">Explore platforms</a>
+    <div class="cta-band__copy">
+      <div class="section-kicker">Next step</div>
+      <h2>Tell us about your molecule.</h2>
+      <p>Dose format, target patient profile, market plan — we will map them to a platform and a development path.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="contact/index.html">Start a conversation</a>
+      <a class="btn btn--ghost" href="products/index.html">Explore platforms</a>
+    </div>
   </div>
 </section>
 
@@ -218,9 +241,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">Injection devices, engineered for your molecule.</p>
-        <p style="font-size:15px;color:var(--brand-pale)">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
+        <p class="footer-address">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
       </div>
       <div>
         <h4>Platforms</h4>
@@ -246,6 +269,7 @@
     <div class="footer-legal">
       <span>© 2026 Summed Medtech. All rights reserved.</span>
       <!-- ICP -->
+      <a class="footer-top" href="#top">Back to top ↑</a>
     </div>
   </div>
 </footer>

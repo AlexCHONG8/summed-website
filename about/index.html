@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/about/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/about/">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="preload" href="../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../index.html"><img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="Main">
+    <nav class="main-nav" id="site-nav" aria-label="Main">
       <ul>
         <li class="nav-item">
-          <a href="../products/index.html">Products</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" href="../products/index.html">Products</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="../products/index.html">All platforms</a>
             <div class="drop-group">
               <div class="drop-label">Auto-injectors</div>
               <a href="../products/simject/index.html">Simject</a>
@@ -50,19 +55,21 @@
         </li>
         <li><a href="../capabilities/index.html">Capabilities</a></li>
         <li><a href="../news/index.html">News</a></li>
-        <li><a href="index.html">About</a></li>
+        <li><a aria-current="page" href="index.html">About</a></li>
         <li><a href="../contact/index.html">Contact</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../contact/index.html">Start a conversation</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="../cn/about/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../ru/about/index.html" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="../cn/about/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../ru/about/index.html" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="../contact/index.html">Start a conversation</a>
     </div>
-    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="hero">
   <div class="container">
@@ -127,19 +134,32 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Where we are</div>
-      <h2>Sichuang Tower, Shanghai</h2>
-      <p>11D, Lane 600, Tianshan Road, Changning District, Shanghai, China — development and business teams in one location, with production programs running for customers across multiple markets.</p>
+    <div class="location-grid">
+      <div class="section-head">
+        <div class="section-kicker">Where we are</div>
+        <h2>Shanghai · Changning District</h2>
+        <p>Development and business teams work from one location, with production programs running for customers across multiple markets.</p>
+      </div>
+      <div class="location-card">
+        <div class="lc-label">Office</div>
+        <p class="lc-address">11D, Sichuang Tower, Lane 600 Tianshan Road,<br>Changning District, Shanghai, China</p>
+        <div class="lc-label">Business development</div>
+        <p class="lc-link"><a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a></p>
+        <a class="btn btn--ghost" href="../contact/index.html">Contact the team</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <h2>Work with the team that builds the device.</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">Our BD and engineering teams respond to every serious program inquiry.</p>
-    <a class="btn btn--primary" href="../contact/index.html">Start a conversation</a>
+    <div class="cta-band__copy">
+<h2>Work with the team that builds the device.</h2>
+    <p>Our BD and engineering teams respond to every serious program inquiry.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="../contact/index.html">Start a conversation</a>
+    </div>
   </div>
 </section>
 
@@ -149,9 +169,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">Injection devices, engineered for your molecule.</p>
-        <p style="font-size:15px;color:var(--brand-pale)">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
+        <p class="footer-address">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
       </div>
       <div>
         <h4>Platforms</h4>
@@ -177,6 +197,7 @@
     <div class="footer-legal">
       <span>© 2026 Summed Medtech. All rights reserved.</span>
       <!-- ICP -->
+      <a class="footer-top" href="#top">Back to top ↑</a>
     </div>
   </div>
 </footer>

@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/products/multtipen/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/products/multtipen/">
 <link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="preload" href="../../../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../../../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../../../index.html"><img src="../../../assets/img/summed-logo.png" alt="Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="Main">
+    <nav class="main-nav" id="site-nav" aria-label="Основная навигация">
       <ul>
         <li class="nav-item">
-          <a href="../index.html">Продукты</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" aria-current="true" href="../index.html">Платформы</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="../index.html">Все платформы</a>
             <div class="drop-group">
               <div class="drop-label">Автоинжекторы</div>
               <a href="../simject/index.html">Simject</a>
@@ -50,37 +55,43 @@
         </li>
         <li><a href="../../capabilities/index.html">Компетенции</a></li>
         <li><a href="../../news/index.html">Новости</a></li>
-        <li><a href="../../about/index.html">О компании</a></li>
+        <li><a href="../../about/index.html">О нас</a></li>
         <li><a href="../../contact/index.html">Контакты</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../../../contact/index.html">Начать диалог</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="../../../products/multtipen/index.html" hreflang="en" lang="en">EN</a><a href="../../../cn/products/multtipen/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="index.html" aria-current="page" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="../../../products/multtipen/index.html" hreflang="en" lang="en">EN</a><a href="../../../cn/products/multtipen/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="index.html" aria-current="page" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="../../contact/index.html">Запросить спецификации</a>
     </div>
-    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
-<section class="hero">
+<section class="product-hero">
   <div class="container">
-    <h1>Multtipen</h1>
-    <p class="hero-sub">Шприц-ручка одноразового применения — разработанная до уровня инъекционного опыта класса FlexTouch и ставшая первой шприц-ручкой этого класса, созданной в Азии.</p>
-    <div class="hero-cta">
+    <nav class="breadcrumbs" aria-label="Навигационная цепочка"><a href="../../index.html">Главная</a> <span class="sep">/</span> <a href="../index.html">Платформы</a> <span class="sep">/</span> <span aria-current="page">Multtipen</span></nav>
+    <div class="product-hero__grid">
+      <div class="product-hero__copy">
+          <div class="section-kicker">Шприц-ручка одноразового применения</div>
+          <h1>Multtipen</h1>
+        <p class="hero-sub">Шприц-ручка одноразового применения — разработанная до уровня инъекционного опыта класса FlexTouch и ставшая первой шприц-ручкой этого класса, созданной в Азии.</p>
+        <div class="hero-cta">
       <a class="btn btn--primary" href="../../contact/index.html">Запросить спецификации</a>
+    </div>
+      </div>
+      <figure class="product-stage">
+        <img src="../../../assets/img/multtipen-hero.jpg" alt="Шприц-ручка Multtipen" width="1124" height="1200">
+        <figcaption><span>Multtipen</span><span>Платформа</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <img src="../../../assets/img/multtipen-hero.jpg" alt="Шприц-ручка Multtipen" width="1124" height="1200" style="display:block;margin:0 auto;border-radius:8px;max-height:640px;width:auto;max-width:100%">
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Ключевые особенности</div>
@@ -166,9 +177,13 @@
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <h2>Дозировка, препарат, рынок — воплощённые в одной ручке.</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">Наши команды развития бизнеса и инженерии отвечают на каждое серьёзное обращение по программам.</p>
-    <a class="btn btn--primary" href="../../contact/index.html">Начать диалог</a>
+    <div class="cta-band__copy">
+<h2>Дозировка, препарат, рынок — воплощённые в одной ручке.</h2>
+    <p>Наши команды развития бизнеса и инженерии отвечают на каждое серьёзное обращение по программам.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="../../contact/index.html">Начать диалог</a>
+    </div>
   </div>
 </section>
 
@@ -178,9 +193,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../../../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../../../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">Инъекционные устройства, разработанные под вашу молекулу.</p>
-        <p style="font-size:15px;color:var(--brand-pale)">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
+        <p class="footer-address">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
       </div>
       <div>
         <h4>Платформы</h4>
@@ -197,7 +212,7 @@
         <ul>
           <li><a href="../../capabilities/index.html">Компетенции</a></li>
           <li><a href="../../news/index.html">Новости</a></li>
-          <li><a href="../../about/index.html">О компании</a></li>
+          <li><a href="../../about/index.html">О нас</a></li>
           <li><a href="../../contact/index.html">Контакты</a></li>
           <li><a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a></li>
         </ul>
@@ -206,6 +221,7 @@
     <div class="footer-legal">
       <span>© 2026 Summed Medtech. Все права защищены.</span>
       <!-- ICP -->
+      <a class="footer-top" href="#top">Наверх ↑</a>
     </div>
   </div>
 </footer>

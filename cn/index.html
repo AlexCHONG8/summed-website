@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="preload" href="../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">跳到主要内容</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="index.html"><img src="../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="主导航">
+    <nav class="main-nav" id="site-nav" aria-label="主导航">
       <ul>
         <li class="nav-item">
-          <a href="products/index.html">产品平台</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" href="products/index.html">产品平台</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="products/index.html">全部平台</a>
             <div class="drop-group">
               <div class="drop-label">自动注射器</div>
               <a href="products/simject/index.html">Simject</a>
@@ -52,26 +57,40 @@
         <li><a href="news/index.html">新闻动态</a></li>
         <li><a href="about/index.html">关于森迈</a></li>
         <li><a href="contact/index.html">联系我们</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../contact/index.html">开始洽谈</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="../index.html" hreflang="en" lang="en">EN</a><a href="index.html" aria-current="page" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../ru/index.html" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="../index.html" hreflang="en" lang="en">EN</a><a href="index.html" aria-current="page" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../ru/index.html" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="contact/index.html">开始洽谈</a>
     </div>
-    <button class="burger" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="菜单" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
-<section class="hero">
+<section class="hero hero--home">
   <div class="container">
-    <h1>为每一个分子，定制一支笔。</h1>
-    <p class="hero-sub">森迈医疗为制药企业与配制药房开发并制造注射笔与自动注射器——从概念设计到受监管的规模化生产。</p>
-    <div class="hero-cta">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">OEM 注射装置 · 上海</div>
+      <h1>为每一个分子，定制一支笔。</h1>
+      <p class="hero-sub">森迈医疗为制药企业与配制药房开发并制造注射笔与自动注射器——从概念设计到受监管的规模化生产。</p>
+      <div class="hero-cta">
       <a class="btn btn--primary" href="products/index.html">浏览产品平台</a>
       <a class="btn btn--ghost" href="contact/index.html">联系商务团队</a>
     </div>
+      <div class="hero-facts">
+        <div class="fact"><span class="fact-k">044730</span><span class="fact-v">美国 DMF</span></div>
+        <div class="fact"><span class="fact-k">ISO 13485</span><span class="fact-v">质量体系</span></div>
+        <div class="fact"><span class="fact-k">上海</span><span class="fact-v">研发与生产</span></div>
+      </div>
+    </div>
+    <figure class="hero-art">
+      <img src="../assets/img/esimject.jpg" alt="eSimject 可重复使用智能自动注射器" width="1400" height="919">
+      <figcaption><span>eSimject</span><span>可重复使用 · 智能</span></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -154,17 +173,17 @@
       <h2>开发伙伴，而非产品目录</h2>
     </div>
     <div class="grid grid--3">
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>装置开发</h3>
-        <p style="color:var(--brand-pale)">可行性研究、详细设计、样机制作与验证——一支工程团队，从第一版需求草稿到设计冻结全程负责。</p>
+        <p>可行性研究、详细设计、样机制作与验证——一支工程团队，从第一版需求草稿到设计冻结全程负责。</p>
       </div>
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>生产制造</h3>
-        <p style="color:var(--brand-pale)">受监管的装配工序，配备过程控制与可追溯体系，产能随您的上市计划弹性扩展。</p>
+        <p>受监管的装配工序，配备过程控制与可追溯体系，产能随您的上市计划弹性扩展。</p>
       </div>
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>质量与法规</h3>
-        <p style="color:var(--brand-pale)">质量体系对标装置标准，法规注册文档包随您的申报进程同步推进。</p>
+        <p>质量体系对标装置标准，法规注册文档包随您的申报进程同步推进。</p>
       </div>
     </div>
   </div>
@@ -178,10 +197,10 @@
       <p>每个项目都从您的用户需求规范出发，最终交付一支患者可以不加思索使用的注射装置。</p>
     </div>
     <div class="grid grid--4">
-      <div class="card"><h3>装置开发</h3><p>在设计控制下完成从概念到设计冻结的全过程。</p></div>
-      <div class="card"><h3>装置支持</h3><p>人因工程、测试与生命周期工程。</p></div>
-      <div class="card"><h3>生产制造</h3><p>受监管规模下的注塑、装配与包装。</p></div>
-      <div class="card"><h3>项目实绩</h3><p>NMPA 及出口市场的多个项目经验。</p></div>
+      <div class="card card--index"><span class="card-index-n">01</span><h3>装置开发</h3><p>在设计控制下完成从概念到设计冻结的全过程。</p></div>
+      <div class="card card--index"><span class="card-index-n">02</span><h3>装置支持</h3><p>人因工程、测试与生命周期工程。</p></div>
+      <div class="card card--index"><span class="card-index-n">03</span><h3>生产制造</h3><p>受监管规模下的注塑、装配与包装。</p></div>
+      <div class="card card--index"><span class="card-index-n">04</span><h3>项目实绩</h3><p>NMPA 及出口市场的多个项目经验。</p></div>
     </div>
     <p class="mt-24"><a class="card-link" href="capabilities/index.html">全部能力 →</a></p>
   </div>
@@ -204,11 +223,15 @@
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <div class="section-kicker">下一步</div>
-    <h2>把您的分子告诉我们。</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">剂型、目标患者画像、市场计划——我们为您匹配平台与开发路径。</p>
-    <a class="btn btn--primary" href="contact/index.html">开始洽谈</a>
-    <a class="btn btn--ghost" href="products/index.html">浏览产品平台</a>
+    <div class="cta-band__copy">
+      <div class="section-kicker">下一步</div>
+      <h2>把您的分子告诉我们。</h2>
+      <p>剂型、目标患者画像、市场计划——我们为您匹配平台与开发路径。</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="contact/index.html">开始洽谈</a>
+      <a class="btn btn--ghost" href="products/index.html">浏览产品平台</a>
+    </div>
   </div>
 </section>
 
@@ -218,9 +241,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">为每一个分子，定制一支笔。</p>
-        <p style="font-size:15px;color:var(--brand-pale)">中国上海市长宁区天山路600弄思创大厦3号11D</p>
+        <p class="footer-address">中国上海市长宁区天山路600弄思创大厦3号11D</p>
       </div>
       <div>
         <h4>产品平台</h4>
@@ -246,6 +269,7 @@
     <div class="footer-legal">
       <span>© 2026 浙江森迈医疗科技有限公司 版权所有</span>
       <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备XXXXXXXX号-1</a>
+      <a class="footer-top" href="#top">返回顶部 ↑</a>
     </div>
   </div>
 </footer>

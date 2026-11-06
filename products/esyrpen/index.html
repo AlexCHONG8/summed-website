@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/products/esyrpen/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/products/esyrpen/">
 <link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="preload" href="../../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../../index.html"><img src="../../assets/img/summed-logo.png" alt="Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="Main">
+    <nav class="main-nav" id="site-nav" aria-label="Main">
       <ul>
         <li class="nav-item">
-          <a href="../index.html">Products</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" aria-current="true" href="../index.html">Products</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="../index.html">All platforms</a>
             <div class="drop-group">
               <div class="drop-label">Auto-injectors</div>
               <a href="../simject/index.html">Simject</a>
@@ -52,35 +57,41 @@
         <li><a href="../../news/index.html">News</a></li>
         <li><a href="../../about/index.html">About</a></li>
         <li><a href="../../contact/index.html">Contact</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../../contact/index.html">Start a conversation</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="../../cn/products/esyrpen/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../../ru/products/esyrpen/index.html" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="../../cn/products/esyrpen/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../../ru/products/esyrpen/index.html" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="../../contact/index.html">Start a conversation</a>
     </div>
-    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
-<section class="hero">
+<section class="product-hero">
   <div class="container">
-    <h1>eSyrpen</h1>
-    <p class="hero-sub">Reusable pen injector platform for chronic therapy areas — dose after dose, on one device.</p>
-    <div class="hero-cta">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> <span class="sep">/</span> <a href="../index.html">Platforms</a> <span class="sep">/</span> <span aria-current="page">eSyrpen</span></nav>
+    <div class="product-hero__grid">
+      <div class="product-hero__copy">
+          <div class="section-kicker">Reusable pen injector</div>
+          <h1>eSyrpen</h1>
+        <p class="hero-sub">Reusable pen injector platform for chronic therapy areas — dose after dose, on one device.</p>
+        <div class="hero-cta">
       <a class="btn btn--primary" href="../../contact/index.html">Request specifications</a>
+    </div>
+      </div>
+      <figure class="product-stage">
+        <img src="../../assets/img/esyrpen.jpg" alt="eSyrpen reusable pen injector" width="813" height="1000">
+        <figcaption><span>eSyrpen</span><span>Platform</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <img src="../../assets/img/esyrpen.jpg" alt="eSyrpen reusable pen injector" width="813" height="1000" style="display:block;margin:0 auto;border-radius:8px;max-height:640px;width:auto;max-width:100%">
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Key features</div>
@@ -116,11 +127,7 @@
       <p>eSyrpen specifications are defined with each program's URS. Share your container and dose requirements — engineering responds with a configuration.</p>
       <p class="mt-24"><a class="btn btn--primary" href="../../contact/index.html">Request full specifications</a></p>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
+    <div class="section-kicker mt-40">Other platforms</div>
     <div class="grid grid--3">
       <div class="card">
         <h3>Multtipen</h3>
@@ -144,9 +151,13 @@
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <h2>Chronic therapy, one durable device.</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">Our BD and engineering teams respond to every serious program inquiry.</p>
-    <a class="btn btn--primary" href="../../contact/index.html">Start a conversation</a>
+    <div class="cta-band__copy">
+<h2>Chronic therapy, one durable device.</h2>
+    <p>Our BD and engineering teams respond to every serious program inquiry.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="../../contact/index.html">Start a conversation</a>
+    </div>
   </div>
 </section>
 
@@ -156,9 +167,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">Injection devices, engineered for your molecule.</p>
-        <p style="font-size:15px;color:var(--brand-pale)">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
+        <p class="footer-address">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
       </div>
       <div>
         <h4>Platforms</h4>
@@ -184,6 +195,7 @@
     <div class="footer-legal">
       <span>© 2026 Summed Medtech. All rights reserved.</span>
       <!-- ICP -->
+      <a class="footer-top" href="#top">Back to top ↑</a>
     </div>
   </div>
 </footer>

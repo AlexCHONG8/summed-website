@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/products/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/products/">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="preload" href="../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../index.html"><img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="Main">
+    <nav class="main-nav" id="site-nav" aria-label="Main">
       <ul>
         <li class="nav-item">
-          <a href="index.html">Products</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" aria-current="page" href="index.html">Products</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="index.html">All platforms</a>
             <div class="drop-group">
               <div class="drop-label">Auto-injectors</div>
               <a href="simject/index.html">Simject</a>
@@ -52,17 +57,19 @@
         <li><a href="../news/index.html">News</a></li>
         <li><a href="../about/index.html">About</a></li>
         <li><a href="../contact/index.html">Contact</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../contact/index.html">Start a conversation</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="../cn/products/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../ru/products/index.html" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a><a href="../cn/products/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../ru/products/index.html" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="../contact/index.html">Start a conversation</a>
     </div>
-    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="hero">
   <div class="container">
@@ -77,46 +84,80 @@
 <section class="section">
   <div class="container">
     <div class="grid grid--3">
-      <div class="card">
-        <span class="badge">Auto-injector · Single-patient-use</span>
-        <h3>Simject</h3>
-        <p>Single-patient-use auto-injector platform with an epinephrine-ready variant for emergency applications.</p>
-        <a class="card-link" href="simject/index.html">View platform →</a>
-      </div>
-      <div class="card">
-        <span class="badge">Auto-injector · Reusable · Smart</span>
-        <h3>eSimject</h3>
-        <p>Reusable electronic smart auto injector — connected dosing through the eHealthSyne app and backend platform, with Bluetooth/4G connectivity covered by a granted China patent.</p>
-        <a class="card-link" href="esimject/index.html">View platform →</a>
-      </div>
-      <div class="card">
-        <span class="badge">Pen injector · Single-patient-use</span>
-        <h3>Multtipen</h3>
-        <p>Single-patient-use pen injector engineered to a FlexTouch-class injection experience — first of its class developed in Asia, covered by US DMF No. 044730.</p>
-        <a class="card-link" href="multtipen/index.html">View platform →</a>
-      </div>
-      <div class="card">
-        <span class="badge">Pen injector · Reusable</span>
-        <h3>eSyrpen</h3>
-        <p>Reusable pen injector platform for chronic therapy areas — dose after dose, on one device.</p>
-        <a class="card-link" href="esyrpen/index.html">View platform →</a>
-      </div>
-      <div class="card card--highlight">
-        <span class="badge badge--dev">In development</span>
-        <h3>eSyrpen Dual Chamber</h3>
-        <p>Two molecules, one pen, three steps. The dual-chamber program replaces the two-vial preparation workflow.</p>
-        <a class="card-link" href="dual-chamber/index.html">View the program →</a>
-      </div>
+      <div class="card card--product">
+          <div class="card-media">
+            <img src="../assets/img/simject-device.jpg" alt="Simject auto-injector" width="724" height="900" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="badge">Auto-injector · Single-patient-use</span>
+            <h3>Simject</h3>
+            <p>Single-patient-use auto-injector platform with an epinephrine-ready variant for emergency applications.</p>
+            <a class="card-link" href="simject/index.html">View platform →</a>
+          </div>
+        </div>
+      <div class="card card--product">
+          <div class="card-media">
+            <img src="../assets/img/esimject.jpg" alt="eSimject reusable smart auto-injector" width="1400" height="919" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="badge">Auto-injector · Reusable · Smart</span>
+            <h3>eSimject</h3>
+            <p>Reusable electronic smart auto injector — connected dosing through the eHealthSyne app and backend platform, with Bluetooth/4G connectivity covered by a granted China patent.</p>
+            <a class="card-link" href="esimject/index.html">View platform →</a>
+          </div>
+        </div>
+      <div class="card card--product">
+          <div class="card-media">
+            <img src="../assets/img/multtipen-hero.jpg" alt="Multtipen pen injector" width="1124" height="1200" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="badge">Pen injector · Single-patient-use</span>
+            <h3>Multtipen</h3>
+            <p>Single-patient-use pen injector engineered to a FlexTouch-class injection experience — first of its class developed in Asia, covered by US DMF No. 044730.</p>
+            <a class="card-link" href="multtipen/index.html">View platform →</a>
+          </div>
+        </div>
+      <div class="card card--product">
+          <div class="card-media">
+            <img src="../assets/img/esyrpen.jpg" alt="eSyrpen reusable pen injector" width="813" height="1000" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="badge">Pen injector · Reusable</span>
+            <h3>eSyrpen</h3>
+            <p>Reusable pen injector platform for chronic therapy areas — dose after dose, on one device.</p>
+            <a class="card-link" href="esyrpen/index.html">View platform →</a>
+          </div>
+        </div>
+      <div class="card card--product card--highlight">
+          <div class="card-media">
+            <img src="../assets/img/dual-chamber.jpg" alt="eSyrpen Dual Chamber pen injector" width="1024" height="1400" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="badge badge--dev">In development</span>
+            <h3>eSyrpen Dual Chamber</h3>
+            <p>Two molecules, one pen, three steps. The dual-chamber program replaces the two-vial preparation workflow.</p>
+            <a class="card-link" href="dual-chamber/index.html">View the program →</a>
+          </div>
+        </div>
+        <div class="card card--cta">
+                <h3>Not sure which one?</h3>
+                <p>Send us your molecule, dose format, and market — we map it to a platform and a development path.</p>
+                <a class="card-link" href="../contact/index.html">Start a conversation →</a>
+              </div>
     </div>
   </div>
 </section>
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <div class="section-kicker">Next step</div>
+    <div class="cta-band__copy">
+<div class="section-kicker">Next step</div>
     <h2>Your molecule decides the design.</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">Share your dose format and target patient profile — we map them to a platform and a development path.</p>
-    <a class="btn btn--primary" href="../contact/index.html">Start a conversation</a>
+    <p>Share your dose format and target patient profile — we map them to a platform and a development path.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="../contact/index.html">Start a conversation</a>
+    </div>
   </div>
 </section>
 
@@ -126,9 +167,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">Injection devices, engineered for your molecule.</p>
-        <p style="font-size:15px;color:var(--brand-pale)">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
+        <p class="footer-address">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
       </div>
       <div>
         <h4>Platforms</h4>
@@ -154,6 +195,7 @@
     <div class="footer-legal">
       <span>© 2026 Summed Medtech. All rights reserved.</span>
       <!-- ICP -->
+      <a class="footer-top" href="#top">Back to top ↑</a>
     </div>
   </div>
 </footer>

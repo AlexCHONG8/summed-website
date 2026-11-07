@@ -13,6 +13,8 @@ Redesign of www.summed-medtech.com. Static HTML/CSS/vanilla JS, no build step.
 - `assets/` — css/js/img
 - `tools/check_site.py` — page gate (overflow/overlap/images/viewport ladder/content policy)
 - `tools/gate-all.sh` — run gate over every page
+- `tools/design-check.sh` — Impeccable design detector (62 rules)
+- `docs/audits/` — design audit notes
 
 ## Development
 
@@ -27,6 +29,18 @@ Gate before committing:
 ```bash
 bash tools/gate-all.sh
 ```
+
+## Design check (Impeccable)
+
+Run the Impeccable detector after UI edits:
+
+```bash
+bash tools/design-check.sh                 # whole site
+bash tools/design-check.sh products/       # one area
+bash tools/design-check.sh --json . > findings.json
+```
+
+It runs the 62-rule anti-pattern / quality detector locally (no model, no API key, no quota; requires Node 18.19+ for `npx`). Warnings should be fixed or registered with a reason in `.impeccable/config.json`; advisory findings do not fail the run. The audit trail lives in `docs/audits/`.
 
 ## Content policy
 

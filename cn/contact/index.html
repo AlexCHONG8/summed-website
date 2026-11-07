@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/contact/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/contact/">
 <link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="preload" href="../../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">跳到主要内容</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../index.html"><img src="../../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="主导航">
+    <nav class="main-nav" id="site-nav" aria-label="主导航">
       <ul>
         <li class="nav-item">
-          <a href="../products/index.html">产品平台</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" href="../products/index.html">产品平台</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="../products/index.html">全部平台</a>
             <div class="drop-group">
               <div class="drop-label">自动注射器</div>
               <a href="../products/simject/index.html">Simject</a>
@@ -51,18 +56,20 @@
         <li><a href="../capabilities/index.html">核心能力</a></li>
         <li><a href="../news/index.html">新闻动态</a></li>
         <li><a href="../about/index.html">关于森迈</a></li>
-        <li><a href="index.html">联系我们</a></li>
+        <li><a aria-current="page" href="index.html">联系我们</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../../contact/index.html">开始洽谈</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="../../contact/index.html" hreflang="en" lang="en">EN</a><a href="index.html" aria-current="page" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../../ru/contact/index.html" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="../../contact/index.html" hreflang="en" lang="en">EN</a><a href="index.html" aria-current="page" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../../ru/contact/index.html" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="index.html">开始洽谈</a>
     </div>
-    <button class="burger" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="菜单" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="hero">
   <div class="container">
@@ -73,41 +80,55 @@
 
 <section class="section">
   <div class="container">
-    <div class="grid grid--2">
-      <div>
-        <h2>直接联系</h2>
-        <p class="mt-24" style="font-size:17px"><strong>邮箱</strong><br><a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a></p>
-        <p class="mt-24" style="font-size:17px"><strong>电话 / WhatsApp</strong><br>+86 186 1699 0383</p>
-        <p class="mt-24" style="font-size:17px"><strong>地址</strong><br>中国上海市长宁区<br>思创大厦</p>
+    <div class="contact-grid">
+      <div class="contact-lead">
+<h2>与造装置的团队直接沟通。</h2>
+        <p>商务与工程团队共同答复。告诉我们您的分子、剂型与时间表——或直接写信给我们。</p>
+        <dl class="contact-list">
+          <div class="contact-item">
+            <dt>邮箱</dt>
+            <dd class="ci-value"><a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a></dd>
+          </div>
+          <div class="contact-item">
+            <dt>电话 / WhatsApp</dt>
+            <dd class="ci-value"><a href="tel:+8618616990383">+86 186 1699 0383</a><br><a href="https://wa.me/8618616990383" rel="noopener">WhatsApp</a></dd>
+          </div>
+          <div class="contact-item">
+            <dt>地址</dt>
+            <dd class="ci-value">上海市长宁区天山路600弄<br>思创大厦3号11D</dd>
+          </div>
+        </dl>
+        <p class="contact-note">每一份认真的项目咨询，都由商务与工程团队共同阅读。</p>
       </div>
-      <div>
-        <h2>在线留言</h2>
+      <div class="form-card">
+<h2>在线留言</h2>
         <form class="form-grid mt-24" id="contact-form" novalidate>
           <div class="form-field">
-            <label for="cf-name">姓名 *</label>
-            <input type="text" id="cf-name" name="name" required>
+            <label for="cf-name">姓名 <span class="req">*</span></label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" aria-describedby="cf-name-err" aria-invalid="false" required>
             <span class="form-error" id="cf-name-err" hidden>请输入您的姓名。</span>
           </div>
           <div class="form-field">
-            <label for="cf-company">公司 *</label>
-            <input type="text" id="cf-company" name="company" required>
+            <label for="cf-company">公司 <span class="req">*</span></label>
+            <input type="text" id="cf-company" name="company" autocomplete="organization" aria-describedby="cf-company-err" aria-invalid="false" required>
             <span class="form-error" id="cf-company-err" hidden>请输入您的公司名称。</span>
           </div>
-          <div class="form-field" style="grid-column:1 / -1">
-            <label for="cf-email">邮箱 *</label>
-            <input type="email" id="cf-email" name="email" required>
+          <div class="form-field full">
+            <label for="cf-email">邮箱 <span class="req">*</span></label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" aria-describedby="cf-email-err" aria-invalid="false" required>
             <span class="form-error" id="cf-email-err" hidden>请输入有效的邮箱地址。</span>
           </div>
-          <div class="form-field" style="grid-column:1 / -1">
-            <label for="cf-message">留言 *</label>
-            <textarea id="cf-message" name="message" rows="6" required></textarea>
+          <div class="form-field full">
+            <label for="cf-message">留言 <span class="req">*</span></label>
+            <textarea id="cf-message" name="message" rows="6" aria-describedby="cf-message-err" aria-invalid="false" required></textarea>
             <span class="form-error" id="cf-message-err" hidden>请输入留言内容。</span>
           </div>
-          <div style="grid-column:1 / -1">
+          <div class="form-submit-row">
             <button type="submit" class="btn btn--primary">发送留言</button>
-            <p style="font-size:14px;color:var(--ink-soft);margin-top:12px">提交后将打开您的邮件客户端并预填留言内容。也可直接致函 <a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a>。</p>
+            <p class="form-fineprint">提交后将打开您的邮件客户端并预填留言内容。也可直接致函 <a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a>。</p>
             <noscript><p class="form-error">此表单需要 JavaScript。请直接发邮件至：bd@summed-medtech.com</p></noscript>
           </div>
+          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </div>
@@ -120,9 +141,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">为每一个分子，定制一支笔。</p>
-        <p style="font-size:15px;color:var(--brand-pale)">中国上海市长宁区天山路600弄思创大厦3号11D</p>
+        <p class="footer-address">中国上海市长宁区天山路600弄思创大厦3号11D</p>
       </div>
       <div>
         <h4>产品平台</h4>
@@ -148,6 +169,7 @@
     <div class="footer-legal">
       <span>© 2026 浙江森迈医疗科技有限公司 版权所有</span>
       <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备XXXXXXXX号-1</a>
+      <a class="footer-top" href="#top">返回顶部 ↑</a>
     </div>
   </div>
 </footer>

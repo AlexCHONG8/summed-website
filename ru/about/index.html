@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/about/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/about/">
 <link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="preload" href="../../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../../index.html"><img src="../../assets/img/summed-logo.png" alt="Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="Main">
+    <nav class="main-nav" id="site-nav" aria-label="Основная навигация">
       <ul>
         <li class="nav-item">
-          <a href="../products/index.html">Продукты</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" href="../products/index.html">Платформы</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="../products/index.html">Все платформы</a>
             <div class="drop-group">
               <div class="drop-label">Автоинжекторы</div>
               <a href="../products/simject/index.html">Simject</a>
@@ -50,19 +55,21 @@
         </li>
         <li><a href="../capabilities/index.html">Компетенции</a></li>
         <li><a href="../news/index.html">Новости</a></li>
-        <li><a href="index.html">О компании</a></li>
+        <li><a aria-current="page" href="index.html">О нас</a></li>
         <li><a href="../contact/index.html">Контакты</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../../contact/index.html">Начать диалог</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="../../about/index.html" hreflang="en" lang="en">EN</a><a href="../../cn/about/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="index.html" aria-current="page" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="../../about/index.html" hreflang="en" lang="en">EN</a><a href="../../cn/about/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="index.html" aria-current="page" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="../contact/index.html">Начать диалог</a>
     </div>
-    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="hero">
   <div class="container">
@@ -77,8 +84,7 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Кто мы</div>
-      <h2>Инженеры устройств, говорящие на языке фармы</h2>
+<h2>Инженеры устройств, говорящие на языке фармы</h2>
     </div>
     <div class="grid grid--2">
       <div class="card">
@@ -104,8 +110,7 @@
 <section class="section section--pale">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Приверженность качеству</div>
-      <h2>Документируем так, как будто от этого зависит всё — потому что так и есть</h2>
+<h2>Документируем так, как будто от этого зависит всё — потому что так и есть</h2>
       <p>Каждое устройство выходит из нашей системы с дизайн-историей, файлом рисков и производственными записями, на которых ваша регуляторная команда может построить регистрационное досье.</p>
     </div>
     <div class="grid grid--3">
@@ -127,19 +132,31 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Где мы находимся</div>
-      <h2>Башня Сычуан, Шанхай</h2>
-      <p>11D, Lane 600, Tianshan Road, Changning District, Shanghai, China — команды разработки и бизнеса в одном месте, с производственными программами для заказчиков на нескольких рынках.</p>
+    <div class="location-grid">
+      <div class="section-head">
+<h2>Шанхай · район Чаннин</h2>
+        <p>Команды разработки и бизнеса работают в одном месте; производственные программы идут для заказчиков на нескольких рынках.</p>
+      </div>
+      <div class="location-card">
+        <div class="lc-label">Офис</div>
+        <p class="lc-address">11D, Sichuang Tower, Lane 600, Tianshan Road,<br>Changning District, Shanghai, China</p>
+        <div class="lc-label">Развитие бизнеса</div>
+        <p class="lc-link"><a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a></p>
+        <a class="btn btn--ghost" href="../contact/index.html">Связаться с командой</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <h2>Работайте с командой, которая строит устройство.</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">Наши команды развития бизнеса и инженерии отвечают на каждое серьёзное обращение по программам.</p>
-    <a class="btn btn--primary" href="../contact/index.html">Начать диалог</a>
+    <div class="cta-band__copy">
+<h2>Работайте с командой, которая строит устройство.</h2>
+    <p>Наши команды развития бизнеса и инженерии отвечают на каждое серьёзное обращение по программам.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="../contact/index.html">Начать диалог</a>
+    </div>
   </div>
 </section>
 
@@ -149,9 +166,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">Инъекционные устройства, разработанные под вашу молекулу.</p>
-        <p style="font-size:15px;color:var(--brand-pale)">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
+        <p class="footer-address">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
       </div>
       <div>
         <h4>Платформы</h4>
@@ -168,7 +185,7 @@
         <ul>
           <li><a href="../capabilities/index.html">Компетенции</a></li>
           <li><a href="../news/index.html">Новости</a></li>
-          <li><a href="index.html">О компании</a></li>
+          <li><a href="index.html">О нас</a></li>
           <li><a href="../contact/index.html">Контакты</a></li>
           <li><a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a></li>
         </ul>
@@ -177,6 +194,7 @@
     <div class="footer-legal">
       <span>© 2026 Summed Medtech. Все права защищены.</span>
       <!-- ICP -->
+      <a class="footer-top" href="#top">Наверх ↑</a>
     </div>
   </div>
 </footer>

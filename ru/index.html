@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="preload" href="../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../index.html"><img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="Main">
+    <nav class="main-nav" id="site-nav" aria-label="Основная навигация">
       <ul>
         <li class="nav-item">
-          <a href="products/index.html">Продукты</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" href="products/index.html">Платформы</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="products/index.html">Все платформы</a>
             <div class="drop-group">
               <div class="drop-label">Автоинжекторы</div>
               <a href="products/simject/index.html">Simject</a>
@@ -50,36 +55,48 @@
         </li>
         <li><a href="capabilities/index.html">Компетенции</a></li>
         <li><a href="news/index.html">Новости</a></li>
-        <li><a href="about/index.html">О компании</a></li>
+        <li><a href="about/index.html">О нас</a></li>
         <li><a href="contact/index.html">Контакты</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../contact/index.html">Начать диалог</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="../index.html" hreflang="en" lang="en">EN</a><a href="../cn/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="index.html" aria-current="page" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="../index.html" hreflang="en" lang="en">EN</a><a href="../cn/index.html" hreflang="zh-CN" lang="zh-CN">中文</a><a href="index.html" aria-current="page" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="contact/index.html">Начать диалог</a>
     </div>
-    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
-<section class="hero">
+<section class="hero hero--home">
   <div class="container">
-    <h1>Инъекционные устройства, разработанные под вашу молекулу.</h1>
-    <p class="hero-sub">Summed Medtech разрабатывает и производит шприц-ручки и автоинжекторы для фармацевтических компаний и аптечных производств — от концепции до регулируемого серийного производства.</p>
-    <div class="hero-cta">
+    <div class="hero-copy">
+<h1>Инъекционные устройства, разработанные под вашу молекулу.</h1>
+      <p class="hero-sub">Summed Medtech разрабатывает и производит шприц-ручки и автоинжекторы для фармацевтических компаний и аптечных производств — от концепции до регулируемого серийного производства.</p>
+      <div class="hero-cta">
       <a class="btn btn--primary" href="products/index.html">Платформы</a>
       <a class="btn btn--ghost" href="contact/index.html">Связаться с отделом развития бизнеса</a>
     </div>
+      <div class="hero-facts">
+        <div class="fact"><span class="fact-k">№ 044730</span><span class="fact-v">DMF США</span></div>
+        <div class="fact"><span class="fact-k">ISO 13485</span><span class="fact-v">СМК</span></div>
+        <div class="fact"><span class="fact-k">Шанхай</span><span class="fact-v">Разработка и производство</span></div>
+      </div>
+    </div>
+    <figure class="hero-art">
+      <img src="../assets/img/esimject.jpg" alt="Многоразовый интеллектуальный автоинжектор eSimject" width="1400" height="919">
+      <figcaption><span>eSimject</span><span>Многоразовый · Интеллектуальный</span></figcaption>
+    </figure>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Платформы</div>
-      <h2>Один партнёр — все форматы инъекций</h2>
+<h2>Один партнёр — все форматы инъекций</h2>
       <p>Каждая платформа адаптируется под вашу спецификацию требований пользователя — дозировка, препарат и рынок определяют конструкцию.</p>
     </div>
     <div class="grid grid--3">
@@ -107,7 +124,7 @@
       </div>
       <div class="card card--product">
         <div class="card-media">
-          <img src="../assets/img/esimject.jpg" alt="Многоразовый интеллектуальный автоинжектор eSimject с картриджами" width="1400" height="919" loading="lazy">
+          <img src="../assets/img/esimject.jpg" alt="Многоразовый интеллектуальный автоинжектор eSimject" width="1400" height="919" loading="lazy">
         </div>
         <div class="card-body">
           <span class="badge">Многоразовый · Интеллектуальный</span>
@@ -129,7 +146,7 @@
       </div>
       <div class="card card--product card--highlight">
         <div class="card-media">
-          <img src="../assets/img/dual-chamber.jpg" alt="Шприц-ручка eSyrpen Dual Chamber с двухкамерным картриджем" width="1024" height="1400" loading="lazy">
+          <img src="../assets/img/dual-chamber.jpg" alt="Шприц-ручка eSyrpen Dual Chamber" width="1024" height="1400" loading="lazy">
         </div>
         <div class="card-body">
           <span class="badge badge--dev">В разработке</span>
@@ -150,21 +167,20 @@
 <section class="section section--dark">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Почему Summed</div>
-      <h2>Партнёр по разработке, а не каталог готовых изделий</h2>
+<h2>Партнёр по разработке, а не каталог готовых изделий</h2>
     </div>
     <div class="grid grid--3">
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>Разработка устройств</h3>
-        <p style="color:var(--brand-pale)">Технико-экономическое обоснование, детальное проектирование, прототипирование и верификация — от первого черновика требований до заморозки конструкции силами одной инженерной команды.</p>
+        <p>Технико-экономическое обоснование, детальное проектирование, прототипирование и верификация — от первого черновика требований до заморозки конструкции силами одной инженерной команды.</p>
       </div>
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>Производство</h3>
-        <p style="color:var(--brand-pale)">Регулируемые операции сборки с внутрипроцессным контролем, прослеживаемостью и мощностями, масштабируемыми под ваш план вывода продукта на рынок.</p>
+        <p>Регулируемые операции сборки с внутрипроцессным контролем, прослеживаемостью и мощностями, масштабируемыми под ваш план вывода продукта на рынок.</p>
       </div>
-      <div class="card" style="background:transparent;border-color:rgba(255,255,255,0.25)">
+      <div class="card">
         <h3>Качество и регулирование</h3>
-        <p style="color:var(--brand-pale)">Системы менеджмента качества, соответствующие стандартам на медицинские изделия, с комплектами регуляторной документации, сопровождающими ваши регистрационные досье.</p>
+        <p>Системы менеджмента качества, соответствующие стандартам на медицинские изделия, с комплектами регуляторной документации, сопровождающими ваши регистрационные досье.</p>
       </div>
     </div>
   </div>
@@ -173,15 +189,14 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Компетенции</div>
-      <h2>От ТЗ пользователя до вывода на рынок</h2>
+<h2>От ТЗ пользователя до вывода на рынок</h2>
       <p>Каждая программа начинается со спецификации требований пользователя и завершается устройством, которым пациенты пользуются не задумываясь.</p>
     </div>
     <div class="grid grid--4">
-      <div class="card"><h3>Разработка устройств</h3><p>От концепции до заморозки конструкции в рамках проектного регулирования.</p></div>
-      <div class="card"><h3>Сопровождение устройств</h3><p>Анализ удобства использования, испытания и инженерия жизненного цикла.</p></div>
-      <div class="card"><h3>Производство</h3><p>Литьё под давлением, сборка и упаковка в регулируемом масштабе.</p></div>
-      <div class="card"><h3>Послужной список</h3><p>Программы в рамках NMPA и на экспортных рынках.</p></div>
+      <div class="card card--row"><h3>Разработка устройств</h3><p>От концепции до заморозки конструкции в рамках проектного регулирования.</p></div>
+      <div class="card card--row"><h3>Сопровождение устройств</h3><p>Анализ удобства использования, испытания и инженерия жизненного цикла.</p></div>
+      <div class="card card--row"><h3>Производство</h3><p>Литьё под давлением, сборка и упаковка в регулируемом масштабе.</p></div>
+      <div class="card card--row"><h3>Послужной список</h3><p>Программы в рамках NMPA и на экспортных рынках.</p></div>
     </div>
     <p class="mt-24"><a class="card-link" href="capabilities/index.html">Все компетенции →</a></p>
   </div>
@@ -190,8 +205,7 @@
 <section class="section section--pale">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Новости</div>
-      <h2>Новости Summed</h2>
+<h2>Новости Summed</h2>
     </div>
     <div class="grid grid--3">
       <div class="card"><span class="badge">Программы</span><h3>Разработка Dual Chamber</h3><p>Программа трёхшаговой инъекции проходит этапы разработки.</p></div>
@@ -204,11 +218,14 @@
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <div class="section-kicker">Следующий шаг</div>
-    <h2>Расскажите нам о вашей молекуле.</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">Формат дозировки, профиль целевого пациента, план рынка — мы соотнесём их с платформой и путём разработки.</p>
-    <a class="btn btn--primary" href="contact/index.html">Начать диалог</a>
-    <a class="btn btn--ghost" href="products/index.html">Платформы</a>
+    <div class="cta-band__copy">
+<h2>Расскажите нам о вашей молекуле.</h2>
+      <p>Формат дозировки, профиль целевого пациента, план рынка — мы соотнесём их с платформой и путём разработки.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="contact/index.html">Начать диалог</a>
+      <a class="btn btn--ghost" href="products/index.html">Платформы</a>
+    </div>
   </div>
 </section>
 
@@ -218,9 +235,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../assets/img/summed-logo.png" alt="Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">Инъекционные устройства, разработанные под вашу молекулу.</p>
-        <p style="font-size:15px;color:var(--brand-pale)">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
+        <p class="footer-address">11D, Lane 600, Tianshan Road, Changning District, Shanghai, China</p>
       </div>
       <div>
         <h4>Платформы</h4>
@@ -237,7 +254,7 @@
         <ul>
           <li><a href="capabilities/index.html">Компетенции</a></li>
           <li><a href="news/index.html">Новости</a></li>
-          <li><a href="about/index.html">О компании</a></li>
+          <li><a href="about/index.html">О нас</a></li>
           <li><a href="contact/index.html">Контакты</a></li>
           <li><a href="mailto:bd@summed-medtech.com">bd@summed-medtech.com</a></li>
         </ul>
@@ -246,6 +263,7 @@
     <div class="footer-legal">
       <span>© 2026 Summed Medtech. Все права защищены.</span>
       <!-- ICP -->
+      <a class="footer-top" href="#top">Наверх ↑</a>
     </div>
   </div>
 </footer>

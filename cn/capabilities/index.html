@@ -15,20 +15,25 @@
 <link rel="alternate" hreflang="zh-CN" href="https://alexchong8.github.io/summed-website/cn/capabilities/">
 <link rel="alternate" hreflang="ru" href="https://alexchong8.github.io/summed-website/ru/capabilities/">
 <link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="preload" href="../../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#002080">
 <script src="../../assets/js/site.js" defer></script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">跳到主要内容</a>
 
 <div class="brand-strip"></div>
 
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="../index.html"><img src="../../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="442" height="34"></a>
-    <nav class="main-nav" aria-label="主导航">
+    <nav class="main-nav" id="site-nav" aria-label="主导航">
       <ul>
         <li class="nav-item">
-          <a href="../products/index.html">产品平台</a>
-          <div class="nav-drop">
+          <a aria-haspopup="true" aria-expanded="false" aria-controls="products-menu" href="../products/index.html">产品平台</a>
+          <div class="nav-drop" id="products-menu">
+            <a class="drop-all" href="../products/index.html">全部平台</a>
             <div class="drop-group">
               <div class="drop-label">自动注射器</div>
               <a href="../products/simject/index.html">Simject</a>
@@ -48,21 +53,23 @@
             </div>
           </div>
         </li>
-        <li><a href="index.html">核心能力</a></li>
+        <li><a aria-current="page" href="index.html">核心能力</a></li>
         <li><a href="../news/index.html">新闻动态</a></li>
         <li><a href="../about/index.html">关于森迈</a></li>
         <li><a href="../contact/index.html">联系我们</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn--primary" href="../../contact/index.html">开始洽谈</a></li>
+        <li class="nav-mobile-lang"><div class="lang-switch"><a href="../../capabilities/index.html" hreflang="en" lang="en">EN</a><a href="index.html" aria-current="page" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../../ru/capabilities/index.html" hreflang="ru" lang="ru">RU</a></div></li>
       </ul>
     </nav>
     <div class="lang-switch"><a href="../../capabilities/index.html" hreflang="en" lang="en">EN</a><a href="index.html" aria-current="page" hreflang="zh-CN" lang="zh-CN">中文</a><a href="../../ru/capabilities/index.html" hreflang="ru" lang="ru">RU</a></div>
     <div class="header-cta">
       <a class="btn btn--primary" href="../contact/index.html">开始洽谈</a>
     </div>
-    <button class="burger" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="菜单" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="hero">
   <div class="container">
@@ -77,8 +84,7 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">装置开发</div>
-      <h2>您的 URS，转化为硬件</h2>
+<h2>您的 URS，转化为硬件</h2>
       <p>每个项目都从您带来的用户需求规范出发——剂量、容器、力学、人因——并在我们的质量体系下历经概念、设计控制与验证。</p>
     </div>
     <div class="grid grid--3">
@@ -102,8 +108,7 @@
 <section class="section section--pale">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">生产制造</div>
-      <h2>为制药供应链而建，而非打样</h2>
+<h2>为制药供应链而建，而非打样</h2>
       <p>装配、包装与产线集成围绕制药生产项目设计——并配备与之匹配的工艺验证。</p>
     </div>
     <div class="grid grid--3">
@@ -127,8 +132,7 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">质量与法规</div>
-      <h2>审计师读得懂的质量体系</h2>
+<h2>审计师读得懂的质量体系</h2>
       <p>对标 ISO 13485 的质量管理，设计与生产文档按客户所在市场的注册申报要求构建。</p>
     </div>
     <div class="grid grid--3">
@@ -152,8 +156,7 @@
 <section class="section section--pale">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">项目实绩</div>
-      <h2>注册审评推进中，生产项目持续运行</h2>
+<h2>注册审评推进中，生产项目持续运行</h2>
       <p>制药客户的 OEM 项目正在通过 FDA 与英国公告机构审评——背后的生产项目持续运行。</p>
     </div>
     <div class="spec-band">
@@ -172,9 +175,13 @@
 
 <section class="section section--dark cta-band">
   <div class="container">
-    <h2>把 URS 交给我们，我们交付装置。</h2>
-    <p style="color:var(--brand-pale);max-width:60ch;margin:16px auto 28px">每一个认真的项目咨询，我们的商务与工程团队都会认真回应。</p>
-    <a class="btn btn--primary" href="../contact/index.html">开始洽谈</a>
+    <div class="cta-band__copy">
+<h2>把 URS 交给我们，我们交付装置。</h2>
+    <p>每一个认真的项目咨询，我们的商务与工程团队都会认真回应。</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--primary" href="../contact/index.html">开始洽谈</a>
+    </div>
   </div>
 </section>
 
@@ -184,9 +191,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="../../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="390" height="30" style="filter:brightness(0) invert(1)">
+        <img src="../../assets/img/summed-logo.png" alt="森迈医疗 Summed Medtech" width="390" height="30" class="footer-logo">
         <p class="footer-tag">为每一个分子，定制一支笔。</p>
-        <p style="font-size:15px;color:var(--brand-pale)">中国上海市长宁区天山路600弄思创大厦3号11D</p>
+        <p class="footer-address">中国上海市长宁区天山路600弄思创大厦3号11D</p>
       </div>
       <div>
         <h4>产品平台</h4>
@@ -212,6 +219,7 @@
     <div class="footer-legal">
       <span>© 2026 浙江森迈医疗科技有限公司 版权所有</span>
       <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备XXXXXXXX号-1</a>
+      <a class="footer-top" href="#top">返回顶部 ↑</a>
     </div>
   </div>
 </footer>
